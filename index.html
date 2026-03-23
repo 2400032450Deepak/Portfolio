@@ -3,445 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Kumar · portfolio</title>
+    <title>Deepak Kumar · Portfolio</title>
+
     <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
-            background: #f3f5f9;
             font-family: 'Inter', sans-serif;
-            line-height: 1.5;
-            color: #1e293b;
+            background: #f3f5f9;
+            margin: 0;
             padding: 2rem 1rem;
+            color: #1e293b;
         }
         .container {
             max-width: 1000px;
-            margin: 0 auto;
+            margin: auto;
             background: white;
-            border-radius: 2rem;
-            box-shadow: 0 20px 35px -8px rgba(0,0,0,0.15);
-            overflow: hidden;
-            padding: 2.5rem 2.8rem;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        /* header section */
         .header {
             text-align: center;
-            margin-bottom: 2rem;
         }
         .name {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            color: #0f172a;
-            line-height: 1.2;
         }
-        .pronoun {
-            font-size: 0.9rem;
+        .tagline {
+            margin-top: 8px;
             color: #475569;
-            margin-top: 0.1rem;
-            margin-bottom: 0.8rem;
-            font-weight: 400;
         }
-        .contact-bar {
+        .contact {
+            margin-top: 10px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.8rem;
-            row-gap: 0.5rem;
-            font-size: 0.95rem;
-            color: #1e293b;
-            margin: 0.8rem 0 0.3rem;
+            gap: 15px;
+            font-size: 0.9rem;
         }
-        .contact-bar a {
-            color: #1e293b;
+        .contact a {
             text-decoration: none;
-            border-bottom: 1px dotted transparent;
-            transition: 0.2s;
-        }
-        .contact-bar a:hover {
-            border-bottom-color: #2563eb;
             color: #2563eb;
         }
-        .contact-bar i {
-            margin-right: 0.3rem;
-            color: #2563eb;
-            width: 1rem;
-        }
-        .divider {
-            border: none;
-            border-top: 2px solid #e2e8f0;
-            margin: 0.5rem 0 1.5rem;
-        }
-        /* section style */
         .section-title {
-            font-size: 1.3rem;
+            margin-top: 2rem;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
             border-bottom: 2px solid #1e293b;
-            padding-bottom: 0.2rem;
-            margin: 1.8rem 0 1rem;
+            padding-bottom: 4px;
         }
-        .section-title:first-of-type {
-            margin-top: 0.2rem;
+        .card {
+            margin-top: 1rem;
         }
-        /* summary */
-        .summary-text {
-            font-size: 1rem;
-            background: #f8fafc;
-            padding: 1rem 1.3rem;
-            border-radius: 20px;
-            border-left: 5px solid #2563eb;
-            margin: 0.5rem 0 0.2rem;
+        ul {
+            padding-left: 1.2rem;
         }
-        .summary-text strong {
-            color: #0f172a;
-            font-weight: 600;
-        }
-        /* education */
-        .edu-item {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.3rem;
-            font-weight: 600;
-            font-size: 1.05rem;
-        }
-        .edu-item .date {
-            font-weight: 400;
-            color: #475569;
-            font-size: 0.95rem;
-        }
-        .edu-detail {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            color: #334155;
-            margin-bottom: 0.5rem;
-            font-size: 0.98rem;
-        }
-        .coursework {
-            font-size: 0.92rem;
-            color: #475569;
-            margin-top: 0.1rem;
-            padding-left: 0.3rem;
-        }
-        /* skills */
-        .skills-list {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem 1rem;
-            margin-top: 0.5rem;
-        }
-        .skills-list li {
-            background: #eef2ff;
-            color: #1e3a8a;
-            padding: 0.3rem 1rem;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid #cbd5e1;
-        }
-        .skills-list li strong {
-            font-weight: 700;
-            color: #0f172a;
-        }
-        /* experience / projects */
-        .exp-item, .project-item {
-            margin-bottom: 1.5rem;
-        }
-        .exp-header, .project-header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: baseline;
-            font-weight: 700;
-            font-size: 1.05rem;
-            margin-bottom: 0.2rem;
-        }
-        .exp-sub {
-            font-style: italic;
-            color: #2d3c5e;
-            margin-bottom: 0.2rem;
-            font-size: 0.95rem;
-        }
-        .project-header a {
-            font-weight: 500;
-            font-size: 0.9rem;
-            background: #eef2ff;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
-            text-decoration: none;
-            color: #2563eb;
-            border: 1px solid #b9c9fa;
-        }
-        .project-header a i {
-            margin-right: 0.2rem;
-        }
-        ul.custom-bullet {
-            list-style: none;
-            padding-left: 0.2rem;
-        }
-        ul.custom-bullet li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.4rem;
-            font-size: 0.96rem;
-            color: #1f2a44;
-        }
-        ul.custom-bullet li::before {
-            content: "▹";
-            position: absolute;
-            left: 0.2rem;
-            color: #2563eb;
-            font-weight: 700;
-        }
-        /* certification tweaks */
-        .cert-item {
-            margin-bottom: 1.2rem;
-        }
-        .cert-header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            font-weight: 600;
-            font-size: 1rem;
-        }
-        .cert-header a {
-            font-weight: 400;
-            font-size: 0.9rem;
-            text-decoration: none;
-            background: #f1f5f9;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
-            color: #1e40af;
-        }
-        .cert-desc {
-            font-size: 0.9rem;
-            color: #334155;
-            margin-left: 0.5rem;
-            list-style: disc;
-        }
-        .cert-desc li {
-            margin-left: 1.2rem;
-        }
-        /* additional */
-        .additional-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 0.5rem;
-        }
-        .add-block p {
-            font-weight: 600;
-            margin-bottom: 0.2rem;
-        }
-        .add-block ul {
-            list-style: none;
-        }
-        .add-block ul li {
-            font-size: 0.95rem;
-            margin-bottom: 0.2rem;
-            display: flex;
-            align-items: baseline;
-        }
-        .add-block ul li i {
-            color: #2563eb;
-            width: 1.3rem;
-            font-size: 0.85rem;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #e2e8f0;
-            margin: 1rem 0;
-        }
-        /* footer / fineprint */
-        .footer-note {
-            margin-top: 2.2rem;
-            text-align: right;
-            font-size: 0.8rem;
-            color: #94a3b8;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 0.8rem;
-        }
-        @media (max-width: 650px) {
-            .container { padding: 1.5rem; }
-            .contact-bar { gap: 1rem; flex-direction: column; align-items: center; }
-            .additional-grid { grid-template-columns: 1fr; }
+        li {
+            margin-bottom: 6px;
         }
     </style>
 </head>
+
 <body>
 <div class="container">
-    <!-- header matching resume exactly -->
+
+    <!-- HEADER -->
     <div class="header">
         <div class="name">DEEPAK KUMAR</div>
-        <div class="pronoun">He/Him</div>
-        <div class="contact-bar">
-            <span><i class="fas fa-phone-alt"></i> +91-6205044756</span>
-            <span><i class="fas fa-envelope"></i> <a href="mailto:0deepak2873i@gmail.com">0deepak2873i@gmail.com</a></span>
-            <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/deepak-kumar2028">deepak-kumar2028</a></span>
-            <span><i class="fab fa-github"></i> <a href="https://github.com/2400032450Deepak">2400032450Deepak</a></span>
-            <span><i class="fas fa-map-marker-alt"></i> India</span>
+        <div class="tagline">
+            Full-Stack Developer | Spring Boot | React.js | AI Systems
+        </div>
+
+        <div class="contact">
+            <span><i class="fas fa-phone"></i> +91-6205044756</span>
+            <a href="mailto:0deepak2873i@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://linkedin.com/in/deepak-kumar2028"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/2400032450Deepak"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://portfolio-theta-lilac-vou1e8e79o.vercel.app/"><i class="fas fa-globe"></i> Portfolio</a>
         </div>
     </div>
-    <hr class="divider">
 
-    <!-- Summary -->
+    <!-- SUMMARY -->
     <div class="section-title">Summary</div>
-    <div class="summary-text">
-        Second-year Computer Science student with strong foundations in <strong>Data Structures & Algorithms</strong> and <strong>Problem Solving</strong> using Java, Python, C++, and C. Full-stack developer experienced in building web applications with <strong>Spring Framework (Java)</strong> and React.js. Coursework includes Operating Systems, Database Management Systems, Computer Networks, and Object-Oriented Programming. Actively learning DevOps practices including Docker and CI/CD.
+    <div class="card">
+        <p>
+            Second-year Computer Science student with strong foundations in <b>Data Structures & Algorithms</b>.
+            Experienced in building scalable applications using <b>Spring Boot, Node.js, and React.js</b>.
+            Developed real-world systems including AI-powered platforms and backend architectures.
+            Currently learning <b>Machine Learning and DevOps (Docker, CI/CD)</b>.
+        </p>
     </div>
 
-    <!-- Education -->
-    <div class="section-title">Education</div>
-    <div class="edu-item">
-        <span><strong>KL University</strong></span>
-        <span class="date">Jul 2024 – Jun 2028</span>
-    </div>
-    <div class="edu-detail">
-        <span>Bachelor of Technology – Computer Science Engineering</span>
-        <span><strong>CGPA: 9.24/10.0</strong></span>
-    </div>
-    <div class="coursework">Relevant Coursework: Operating Systems, Database Management Systems, Computer Networks, Object-Oriented Programming, Machine Learning (exposure)</div>
-
-    <!-- Technical Skills -->
-    <div class="section-title">Technical Skills</div>
-    <ul class="skills-list">
-        <li><strong>Languages:</strong> Java, Python, C++,  C, JavaScript</li>
-        <li><strong>Frontend:</strong> React.js, HTML5/CSS3, Bootstrap, Figma</li>
-        <li><strong>Backend & DB:</strong> Spring Framework (Boot, MVC), MySQL, DBMS, SQL, Hibernate (learning)</li>
-        <li><strong>DevOps & Tools:</strong> Git, GitHub, Docker (learning), Jenkins (learning), Maven, CI/CD concepts</li>
-        <li><strong>Core CS:</strong> DSA, OOP, OS, Computer Networking, DBMS, Cloud fundamentals</li>
-    </ul>
-
-    <!-- Experience -->
-    <div class="section-title">Experience</div>
-    <div class="exp-item">
-        <div class="exp-header">
-            <span><strong>Center for Innovation, Incubation & Entrepreneurship (CIIE)</strong></span>
-            <span class="date"><i>Aug 2024 – Present</i></span>
-        </div>
-        <div class="exp-sub">Active Member | Activity Designer & Team Contributor · KL University</div>
-        <ul class="custom-bullet">
-            <li>Collaborate with cross-functional teams to prototype project ideas and organize hackathon events</li>
-        </ul>
-    </div>
-
-    <!-- Projects -->
+    <!-- PROJECTS -->
     <div class="section-title">Projects</div>
-    <div class="project-item">
-        <div class="project-header">
-            <span><strong>AgroValue Connect</strong></span>
-            <a href="https://github.com/2400032450Deepak/AgroValue_Connect.git" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
-        </div>
-        <ul class="custom-bullet">
-            <li>Web platform connecting farmers and buyers; React.js frontend completed, Spring Boot backend in progress.</li>
-            <li>Designed MySQL schema for users, products, and orders; planning REST APIs and JWT authentication.</li>
-            <li><strong>Tech Stack:</strong> React.js, Java (Spring Boot), MySQL, Maven, Git</li>
-        </ul>
-    </div>
-    <!-- Additional project (optional but shows activeness) mentioned "12+ repositories", add one more line from resume -->
-    <div class="project-item" style="margin-top: -0.2rem;">
-        <div class="project-header">
-            <span><strong>More Spring Boot & React projects</strong></span>
-            <a href="https://github.com/2400032450Deepak?tab=repositories" target="_blank"><i class="fas fa-code-branch"></i> 12+ repos</a>
-        </div>
-        <ul class="custom-bullet">
-            <li>Active GitHub with multiple repositories including Spring Boot experiments and full-stack prototypes.</li>
+
+    <div class="card">
+        <b>DeliverShield AI – Parametric Insurance Platform</b>
+        <ul>
+            <li>Designed AI-driven system to protect gig workers from income loss due to real-world disruptions.</li>
+            <li>Integrated real-time APIs (weather, AQI, traffic).</li>
+            <li>Implemented ML-based risk prediction and automated payouts.</li>
+            <li><b>Tech:</b> React, Spring Boot, Python, MySQL</li>
         </ul>
     </div>
 
-    <!-- Certifications (all links and structure from resume) -->
-    <div class="section-title">Certifications</div>
-    
-    <div class="cert-item">
-        <div class="cert-header">
-            <span><strong>Meta Front-End Developer</strong> – Meta (Coursera)</span>
-            <a href="https://www.coursera.org/account/accomplishments/specialization/MV19E15XKNCK" target="_blank">Certificate ↗</a>
-        </div>
-        <ul class="custom-bullet cert-desc">
-            <li>React.js, UI Libraries, Bootstrap, Version Control</li>
+    <div class="card">
+        <b>HomeValor – ROI Calculator</b>
+        <ul>
+            <li>Developed full-stack application to calculate ROI on home improvements.</li>
+            <li>Implemented secure authentication using JWT and bcrypt.</li>
+            <li>Built REST APIs and analytics features.</li>
+            <li><b>Tech:</b> React, Node.js, Express.js, MongoDB</li>
         </ul>
     </div>
 
-    <div class="cert-item">
-        <div class="cert-header">
-            <span><strong>IBM Front-End Development with Figma, Bootstrap & Git Specialization</strong> – IBM</span>
-            <a href="https://www.coursera.org/account/accomplishments/specialization/RV7YMIBN266R" target="_blank">Certificate ↗</a>
-        </div>
-        <ul class="custom-bullet cert-desc">
-            <li>Front-end development, UI/UX principles, Git workflows</li>
+    <div class="card">
+        <b>OceanGuard – Coastal Monitoring System</b>
+        <ul>
+            <li>Developing system to detect ocean threats like oil spills and illegal fishing.</li>
+            <li>Dashboard with image/video reporting system.</li>
+            <li>AI-based anomaly detection (in progress).</li>
+            <li><b>Tech:</b> React, Spring Boot</li>
         </ul>
     </div>
 
-    <div class="cert-item">
-        <div class="cert-header">
-            <span><strong>IBM Machine Learning</strong> – IBM</span>
-            <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/P9KTXN9WBYV2" target="_blank">Certificate ↗</a>
-        </div>
-        <ul class="custom-bullet cert-desc">
-            <li>Python, Scikit-learn, Deep Learning; expertise across Supervised, Unsupervised, and Reinforcement Learning</li>
+    <div class="card">
+        <b>AgroValue Connect – Farmer Marketplace</b>
+        <ul>
+            <li>Platform connecting farmers directly with buyers.</li>
+            <li>Designed backend architecture and database schema.</li>
+            <li><b>Tech:</b> React, Spring Boot, MySQL</li>
         </ul>
     </div>
 
-    <div class="cert-item">
-        <div class="cert-header">
-            <span><strong>AI-Assisted Software Development (GenAI)</strong> – GitHub Copilot (GH-300)</span>
-            <a href="https://learn.microsoft.com/api/credentials/share/en-us/DEEPAKKUMAR-6683/48705C85006DB10F?sharingId=5358E86B3DCAFC2F" target="_blank">Certificate ↗</a>
-        </div>
-        <!-- no extra bullet needed, but we add a short desc from resume -->
-        <ul class="custom-bullet cert-desc">
-            <li>GitHub Copilot certification (GH-300)</li>
+    <!-- CURRENT -->
+    <div class="section-title">Currently Building</div>
+    <div class="card">
+        <ul>
+            <li>Enhancing OceanGuard with AI-based features</li>
+            <li>Improving backend systems using Spring Boot</li>
+            <li>Learning Docker and CI/CD pipelines</li>
         </ul>
     </div>
 
-    <!-- Additional Information (split in two columns for readability) -->
-    <div class="section-title">Additional</div>
-    <div class="additional-grid">
-        <div class="add-block">
-            <p><i class="fas fa-language" style="color:#2563eb; width:1.3rem;"></i> Languages</p>
-            <ul>
-                <li><i class="fas fa-check-circle" style="font-size:0.7rem;"></i> English (Professional working proficiency)</li>
-                <li><i class="fas fa-check-circle" style="font-size:0.7rem;"></i> Hindi (Native or bilingual)</li>
-            </ul>
-        </div>
-        <div class="add-block">
-            <p><i class="fas fa-trophy"></i> Achievements</p>
-            <ul>
-                <li><i class="fas fa-code"></i> 200+ problems solved on Codechef & Leetcode</li>
-                <li><i class="fab fa-github"></i> 12+ repositories including Spring Boot projects</li>
-            </ul>
-        </div>
-        <div class="add-block">
-            <p><i class="fas fa-calendar-alt"></i> Activities</p>
-            <ul>
-                <li><i class="fas fa-users"></i> Participant in university hackathons, Smart India Hackathon 2025</li>
-            </ul>
-        </div>
-        <div class="add-block">
-            <p><i class="fas fa-heart"></i> Technical Interests</p>
-            <ul>
-                <li><i class="fas fa-cogs"></i> Software Eng., Full‑stack (Java Spring), Problem Solving</li>
-            </ul>
-        </div>
+    <!-- SKILLS -->
+    <div class="section-title">Skills</div>
+    <div class="card">
+        <p><b>Languages:</b> Java, Python, C, JavaScript</p>
+        <p><b>Frontend:</b> React.js, HTML, CSS</p>
+        <p><b>Backend:</b> Spring Boot, Node.js</p>
+        <p><b>Database:</b> MySQL, MongoDB</p>
     </div>
 
-    <!-- micro footer to mirror resume completeness -->
-    <div class="footer-note">
-        <i class="fas fa-terminal"></i> always building — deepak2873.dev/resume · updated 2026
+    <!-- ACHIEVEMENTS -->
+    <div class="section-title">Achievements</div>
+    <div class="card">
+        <ul>
+            <li>250+ problems solved on LeetCode & CodeChef</li>
+            <li>45+ GitHub repositories</li>
+            <li>Participant – Smart India Hackathon 2025</li>
+        </ul>
     </div>
+
 </div>
-<!-- portfolio is fully aligned with the provided resume content -->
 </body>
 </html>
